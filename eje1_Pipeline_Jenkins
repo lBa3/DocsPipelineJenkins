@@ -1,36 +1,14 @@
 pipeline {
-    agent any 
+    agent any
     stages {
-        stage('Build') { 
+        stage('Build') {
             steps {
-                echo 'Construyendo la Aplicación' 
-            }
-        }
-        stage('Test') { 
-            steps {
-                echo 'Arranca el proceso de pruebas unitarias' 
-            }
-        }
-        stage('Deploy') { 
-            steps {
-                echo 'Desplegando al área de desarrollo' 
-            }
-        }
-    }
-}
-
-
-
-pipeline {
-    agent any 
-    stages {
-        stage('Build') { 
-            steps {
-                sh 'echo "Construyendo la Aplicación"'
-		     sh '''
-                echo "Pasos múltiples de shell también funcionan"
-			    pwd
-             '''
+                sh 'echo "Hello World"'
+                sh '''
+                    echo "Multiline shell steps works too"
+                    ls -lah
+                    pwd
+                '''
             }
         }
         stage('Test') { 
