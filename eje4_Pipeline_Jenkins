@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Ejemplo Username/Password') {
             environment {
-                CRED_USUARIO = credentials('USUARIO1')
+                CRED_USUARIO = credentials('test')
             }
             steps {
                 sh 'echo "El usuario es $CRED_USUARIO_USR"'
@@ -17,7 +17,7 @@ pipeline {
 pipeline {
     agent any
     environment { 
-        SECRET_TEXT = credentials('USUARIO50')
+        SECRET_TEXT = credentials('test2')
     }
     stages {
         stage('Ejemplo para Secret Text') {
