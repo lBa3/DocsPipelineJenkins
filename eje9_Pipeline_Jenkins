@@ -13,5 +13,3 @@ pipeline {
         }
     }
 }
-
-#Script con error para la clase de Post
